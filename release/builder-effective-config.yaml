@@ -1,0 +1,26 @@
+directories:
+  output: release
+  buildResources: build
+appId: com.inventory.laptops
+productName: JFS-Nethawk-LMS
+extraResources:
+  - from: seed.db
+    to: seed.db
+files:
+  - filter:
+      - dist/**/*
+      - electron/**/*
+      - package.json
+win:
+  target: nsis
+  icon: laptop.ico
+nsis:
+  oneClick: false
+  allowToChangeInstallationDirectory: true
+  installerIcon: laptop.ico
+  uninstallerIcon: laptop.ico
+  installerHeaderIcon: laptop.ico
+  createDesktopShortcut: true
+  createStartMenuShortcut: true
+  shortcutName: JFS-Nethawk-LMS
+electronVersion: 33.4.11
